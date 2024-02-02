@@ -1,4 +1,4 @@
-# baton-starter-pack
+# baton-zendesk
 A simple template for quickly building your own Baton connector.
 
 ## How to use
@@ -8,8 +8,8 @@ A simple template for quickly building your own Baton connector.
     ```json
     {
        "repo_owner": "conductorone",
-       "repo_name": "baton-example",
-       "name": "baton-example"
+       "repo_name": "baton-zendesk",
+       "name": "baton-zendesk"
     }
     ```
 10. Commit this change, and a Github action will process the update and initialize the repo for you.
