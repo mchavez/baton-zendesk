@@ -3,15 +3,15 @@ GOARCH = $(shell go env GOARCH)
 BUILD_DIR = dist/${GOOS}_${GOARCH}
 
 ifeq ($(GOOS),windows)
-OUTPUT_PATH = ${BUILD_DIR}/{{ cookiecutter.name }}.exe
+OUTPUT_PATH = ${BUILD_DIR}/{{ baton-zendesk }}.exe
 else
-OUTPUT_PATH = ${BUILD_DIR}/{{ cookiecutter.name }}
+OUTPUT_PATH = ${BUILD_DIR}/{{ baton-zendesk }}
 endif
 
 .PHONY: build
 build:
-	go build -o ${OUTPUT_PATH} ./cmd/{{ cookiecutter.name }}
-	go build -o ${OUTPUT_PATH} ./cmd/{{ cookiecutter.name }}
+	go build -o ${OUTPUT_PATH} ./cmd/{{ baton-zendesk }}
+	go build -o ${OUTPUT_PATH} ./cmd/{{ baton-zendesk }}
 
 .PHONY: update-deps
 update-deps:
