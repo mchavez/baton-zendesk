@@ -11,7 +11,7 @@ import (
 	"github.com/grpc-ecosystem/go-grpc-middleware/logging/zap/ctxzap"
 	"go.uber.org/zap"
 
-	"github.com/{{ cookiecutter.repo_owner }}/{{ cookiecutter.repo_name }}/pkg/connector"
+	"github.com/conductorone/baton-zendesk/baton-zendesk/pkg/connector"
 )
 
 var version = "dev"
@@ -20,7 +20,7 @@ func main() {
 	ctx := context.Background()
 
 	cfg := &config{}
-	cmd, err := cli.NewCmd(ctx, "{{ cookiecutter.name }}", cfg, validateConfig, getConnector)
+	cmd, err := cli.NewCmd(ctx, "baton-zendesk", cfg, validateConfig, getConnector)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(1)
